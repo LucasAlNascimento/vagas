@@ -8,15 +8,15 @@
         
         <div class="row mt-5">
             <div class="col-4">
-                <indicador titulo="Vagas abertas" indicador="100"></indicador>
+                <indicador titulo="Vagas abertas" indicador="100" bg="bg-dark" color="text-white"></indicador>
             </div>
 
             <div class="col-4">
-                <indicador titulo="Profissionais cadastrados" indicador="320"></indicador>
+                <indicador titulo="Profissionais cadastrados" indicador="320" bg="bg-dark" color="text-white"></indicador>
             </div>
 
             <div class="col-4">
-                <indicador titulo="Visitantes online" indicador="15"></indicador>
+                <indicador titulo="Visitantes online" indicador="15" bg="bg-light" color="text-dark"></indicador>
             </div>
         </div>
     </div>
