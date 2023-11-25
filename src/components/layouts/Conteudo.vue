@@ -17,6 +17,7 @@ export default {
         Home,
         PublicarVaga
     }
+    
 }
 </script>
   
