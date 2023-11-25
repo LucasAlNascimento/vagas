@@ -22,7 +22,9 @@
   
   
 <script>
-
+export default {
+    name: 'Topo'
+}
 </script>
   
   

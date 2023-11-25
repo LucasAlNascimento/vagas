@@ -2,14 +2,14 @@
     <div>
         <p>Conteúdo</p>
     </div>
-  </template>
+</template>
   
   
-  <script>
+<script>
+export default {
+    name: 'Conteudo'
+}
+</script>
   
-  </script>
   
-  
-  <style>
-  
-  </style>
+<style></style>
