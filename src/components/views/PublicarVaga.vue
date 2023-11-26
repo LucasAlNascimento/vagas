@@ -10,7 +10,7 @@
             <div class="col">
                 <label class="form-label">Título da vaga</label>
                 <input type="text" class="form-control" v-model="titulo">
-                <div class="form-text">Por exemplo: Programador Javascript e VueJS</div>
+                <div class="form-text">Por exemplo: Desenvolvedor Javascript e VueJS</div>
             </div>
         </div>
 
@@ -91,6 +91,15 @@ export default {
                 publicacao: dataAtual.toISOString()
             })
             localStorage.setItem('vagas', JSON.stringify(vagas))
+
+            this.resetaFormularioCadastroVaga()
+        },
+        resetaFormularioCadastroVaga() {
+            this.titulo = ''
+            this.descricao = ''
+            this.salario = ''
+            this.modalidade = ''
+            this.tipo = ''
         }
     }
 }
