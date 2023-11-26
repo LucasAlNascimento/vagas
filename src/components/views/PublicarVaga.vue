@@ -90,11 +90,16 @@ export default {
                 tipo: this.tipo,
                 publicacao: dataAtual.toISOString()
             })
-            //localStorage.setItem('vagas', JSON.stringify(vagas))
 
-            this.emitter.emit('alerta')
+            if(this.validaFormulario()){
+                
+                localStorage.setItem('vagas', JSON.stringify(vagas))
+                this.emitter.emit('alerta')
+                this.resetaFormularioCadastroVaga()
 
-            this.resetaFormularioCadastroVaga()
+            } else {
+                return this.validaFormulario()
+            }
         },
         resetaFormularioCadastroVaga() {
             this.titulo = ''
@@ -102,10 +107,19 @@ export default {
             this.salario = ''
             this.modalidade = ''
             this.tipo = ''
+        },
+        validaFormulario() {
+
+            let valido = true
+
+            if (this.titulo === '') valido = false
+            if (this.descricao === '') valido = false
+            if (this.salario === '') valido = false
+            if (this.modalidade === '') valido = false
+            if (this.tipo === '') valido = false
+
+            return valido
         }
     }
 }
 </script>
-  
-  
-<style></style>

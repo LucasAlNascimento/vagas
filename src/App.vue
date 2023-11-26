@@ -28,8 +28,8 @@ export default {
   mounted() {
     this.emitter.on('alerta', () => {
       this.exibirAlerta = true
-      setTimeout(() => this.exibirAlerta = false, 4000);
-      console.log('Apresentar mensagem de alerta customizada')
+      setTimeout(() => 
+        this.exibirAlerta = false, 4000);
     })
   }
 }
