@@ -1,7 +1,7 @@
 <template>
   <div>
-    <topo></topo>
-    <conteudo></conteudo>
+    <topo @navegar="componente = $event"></topo>
+    <conteudo :conteudo="componente"></conteudo>
   </div>
 </template>
 
@@ -11,6 +11,9 @@ import Topo from '@/components/layouts/Topo.vue'
 
 export default {
   name: 'App',
+  data: () => ({
+    componente: 'Home'
+  }),
   components: {
     Conteudo,
     Topo
@@ -18,6 +21,3 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
