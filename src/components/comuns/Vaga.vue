@@ -6,7 +6,7 @@
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                Salário: {{salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}} | Modalidade: {{getModalidade}} | Tipo: {{getTipo}} | Publicação: {{publicacao}}
+                Salário: {{salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}} | Modalidade: {{getModalidade}} | Tipo: {{getTipo}} | Publicação: {{getPublicacao}}
             </small>
         </div>
     </div>
@@ -57,6 +57,11 @@ export default {
             }
             return ''
 
+        },
+
+        getPublicacao(){
+            let dataPublicacao = new Date(this.publicacao)
+            return dataPublicacao.toLocaleDateString('pt-BR')
         }
     }
 }
