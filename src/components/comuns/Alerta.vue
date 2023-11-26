@@ -1,5 +1,7 @@
 <template>
-    <h1>Alerta</h1>
+    <div class="alert alert-success" role="alert">
+        Cadastrado com sucesso
+    </div>
 </template>
 
 <script>
