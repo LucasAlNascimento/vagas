@@ -6,7 +6,7 @@
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                Salário: {{salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}} | Modalidade: {{modalidade}} | Tipo: {{tipo}} | Publicação: {{publicacao}}
+                Salário: {{salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}} | Modalidade: {{getModalidade}} | Tipo: {{getTipo}} | Publicação: {{publicacao}}
             </small>
         </div>
     </div>
@@ -15,7 +15,50 @@
 <script>
 export default {
     name: 'Vaga',
-    props: ['titulo', 'descricao', 'salario', 'modalidade', 'tipo', 'publicacao']
+    props: {
+        titulo: {
+            type: String,
+            required: true
+        },
+        descricao: {
+            type: String,
+            required: true
+        },
+        salario: {
+            type: Number,
+            required: true
+        },
+        modalidade: {
+            type: String,
+            required: true
+        },
+        tipo: {
+            type: String,
+            required: true
+        },
+        publicacao: {
+            type: String,
+            required: true
+        }
+    },
+    computed: {
+        getModalidade() {
+            switch(this.modalidade){
+                case '1': return 'Home Office'
+                case '2': return 'Presencial'
+            }
+            return ''
+            
+        },
+        getTipo() {
+            switch(this.tipo){
+                case '1': return 'CLT'
+                case '2': return 'PJ'
+            }
+            return ''
+
+        }
+    }
 }
 
 </script>
