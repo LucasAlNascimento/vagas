@@ -5,7 +5,9 @@
             <p>{{ descricao }}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Salário: R$ {{salario}} | Modalidade: {{modalidade}} | Tipo: {{tipo}} | Publicação: {{publicacao}}</small>
+            <small class="text-muted">
+                Salário: {{salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}} | Modalidade: {{modalidade}} | Tipo: {{tipo}} | Publicação: {{publicacao}}
+            </small>
         </div>
     </div>
 </template>
